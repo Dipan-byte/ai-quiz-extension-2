@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Article Assistant",
+  "version": "1.0",
+  "description": "Notifies, summarizes, and quizzes you on long articles.",
+  "permissions": [
+    "storage",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://api-inference.huggingface.co/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/icon48.jpg"
+    }
+  },
+  "icons": {
+    "48": "icons/icon48.jpg"
+  }
+}
