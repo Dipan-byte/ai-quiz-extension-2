@@ -1,5 +1,5 @@
 const HUGGING_FACE_API_URL = "https://api-inference.huggingface.co/models/sshleifer/distilbart-cnn-12-6";
-const HF_API_KEY = "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"; // Replace with your working token
+const HF_API_KEY =  // Replace with your working token
 
 async function getHuggingFaceSummary(text) {
   try {
